@@ -65,7 +65,9 @@ body {
 /* Основні стилі Navbar */
 .full-width-navbar {
     width: 100%;
-    background: #4c719e !important;
+    /* background: #4c719e !important; */
+    /* background: #185783 !important; */
+    background: #176798!important;
     position: -webkit-sticky;
     /* Для старих браузерів */
     position: sticky;
