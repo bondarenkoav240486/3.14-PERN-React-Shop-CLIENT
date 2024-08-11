@@ -6,7 +6,7 @@ html {
     background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg');
     /* background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg') center center / cover no-repeat; */
     /* background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg') top center / cover no-repeat; */
-
+/* d */
     background-size: cover;
     color: #4c719e !important;
 }
@@ -939,14 +939,14 @@ body {
 
 .Filters .list-group-item.active {
     z-index: 2;
-    color: #fff;
+    color: #fff !important;
     background-color: #3061959c;
     border-color: #1a579700;
 }
 
 .Filters .p-3.list-group-item {
     color: #4c719e !important;
-    color: white !important;
+    /* color: white !important; */
 }
 
 /* .Filters */
@@ -1065,7 +1065,11 @@ body {
 .DrawerLeft_for_Filters .Filters {
     font-size: 1.15rem;
 }
-
+.DrawerLeft_for_Filters
+.Filters .p-3.list-group-item {
+    color: #ffffff !important;
+}
+.DrawerLeft_for_Filters
 .Filters .p-3.list-group-item.active {
     /* color: #ffffff !important; */
     color: #4c719e !important;
@@ -1073,6 +1077,7 @@ body {
     /* background: #ffffff; */
     background: #c9def7;
 }
+
 
 
 
