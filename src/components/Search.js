@@ -50,7 +50,7 @@ const Search = observer(() => {
     return (
      
 
-        <Box className="Search Row DrawerTop" sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+        <Box className="Search Row " sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
             <Paper
                 component="form"
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}

@@ -6,7 +6,7 @@ html {
     background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg');
     /* background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg') center center / cover no-repeat; */
     /* background: url('images/stock-vector-household-appliances-doodle-hand-drawn-seamless-pattern-vector-line-illustration-isolated-from-448991380.jpg') top center / cover no-repeat; */
-/* d */
+    /* d */
     background-size: cover;
     color: #4c719e !important;
 }
@@ -67,7 +67,7 @@ body {
     width: 100%;
     /* background: #4c719e !important; */
     /* background: #185783 !important; */
-    background: #176798!important;
+    background: #176798 !important;
     position: -webkit-sticky;
     /* Для старих браузерів */
     position: sticky;
@@ -90,26 +90,28 @@ body {
 
 }
 
+.navbar .button {
+    margin-left: 2rem;
+    color: white;
+}
+
 
 /* BURGERMENU */
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-    /* background-color: #2d5d7eda !important; */
+
+/* .BurgerMenuNav  */
+.Drawerburgmenu .MuiPaper-root,
+.BurgerMenuDrawerCatalogTypeBar .MuiPaper-root {
     width: 19rem !IMPORTANT;
     background-color: #1c5d80f2 !important;
     color: rgb(255 255 255) !important;
+
 }
 
-.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+/* .BurgerMenuNav  */
+.Drawerburgmenu .MuiSvgIcon-root {
     color: rgb(255, 255, 255) !important;
 }
 
-.css-cveggr-MuiListItemIcon-root {
-    color: rgb(255 255 255) !important;
-}
-
-.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
-    background-color: rgb(255 255 255 / 0%) !important;
-}
 
 /* Логотип */
 .logo,
@@ -165,18 +167,22 @@ body {
 /* ///////////////////////////////////////////////////////////////////////// */
 /* SEARCH/////////////////////////////////////////////////////////// */
 
-/* .SearchInNavbar
-{
+/* .SearchInNavbar  */
+.navbar .Search {
     margin-left: auto;
-} */
+}
+
 .Search .css-yz9k0d-MuiInputBase-input {
     font-size: 1rem;
 }
 
-.Search .css-1vm0r4s-MuiPaper-root {
-    background-color: #fff !important;
-    color: rgba(0, 0, 0, 0.87);
-    height: 2rem;
+.Search
+.MuiPaper-root
+/* .css-1vm0r4s-MuiPaper-root  */
+    {
+    /* background-color: #fff !important; */
+    /* color: rgba(0, 0, 0, 0.87); */
+    height: 2rem !important;
 }
 
 .Search svg {
@@ -187,6 +193,70 @@ body {
 .css-kl1xo3 {
     margin-top: 0px !important;
 }
+
+
+
+
+.navbar .SearchButton {
+    display: none;
+}
+
+.navbar .SearchButton svg {
+    /* display: none; */
+    /* font-size: 2.5rem; */
+    font-size: 3.0rem !important;
+}
+
+.DrawerTopSearch .MuiPaper-root {
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c719ef5 !important;
+    height: 30rem;
+}
+
+.DrawerTopSearch .MuiPaper-root
+
+/* .MuiSvgIcon-root */
+.CloseDrawerTopSearchIcon {
+    position: absolute;
+    top: 1.9rem;
+    right: 1.9rem;
+    right: 8.5%;
+    color: white;
+}
+
+.DrawerTopSearch
+
+/* .MuiPaper-root */
+.Search {
+    width: 83%;
+    /* border:1px solid red */
+}
+
+.DrawerTopSearch .Search form.MuiPaper-root {
+    background-color: white !important;
+}
+
+
+/* .DrawerTopSearch */
+/* .MuiPaper-root */
+/* .Search */
+/* .MuiPaper-root */
+/* .css-kl1xo3  */
+    /* { */
+    /* height: 2rem; */
+    /* margin-top: 16px; */
+/* } */
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
 
 /* .Search.DrawerTop*/
 .Search.DrawerTop {
@@ -199,22 +269,13 @@ body {
     margin-left: 0;
 }
 
-.Search.DrawerTop .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4c719ef5 !important;
-    height: 30rem;
-}
 
-.Search.DrawerTop .css-1vm0r4s-MuiPaper-root {
-    background-color: #61dafb00;
-}
+
 
 .Search.DrawerTop .Search .MuiPaper-root {
     display: flex;
     align-items: center;
-    height: 2rem;
+    /* height: 2rem; */
     width: 100%;
     background: white;
 }
@@ -224,20 +285,7 @@ body {
     margin-top: 16px;
 }
 
-.Search.DrawerTop .CloseDrawerTopSearchIcon {
-    position: absolute;
-    top: 1.9rem;
-    right: 1.9rem;
-    right: 8.5%;
-    color: white;
-}
-
-
-
-
-
-
-
+.Search.DrawerTop
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!......................... */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!......................... */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!......................... */
@@ -251,6 +299,14 @@ body {
     color: #ffffff;
     font-size: 0.9rem;
 }
+.navbar .button .text {
+    font-size: 0.7rem;
+}
+
+.navbar svg {
+    font-size: 2.5rem;
+}
+
 
 .navbar .button svg {
     font-size: 2rem;
@@ -261,17 +317,11 @@ body {
     color: #e0e0e0;
 }
 
-.navbar .button .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
-    background-color: #4c719ef5 !important;
-}
 
-/* .Catalog.DrawerTop .TypeBar { */
-    /* background-color: #4c719e00; */
-/* } */
 
-/* .Catalog.DrawerTop .TypeBar .css-bshv44-MuiButtonBase-root-MuiListItem-root { */
-    /* color: white; */
-/* } */
+
+
+
 
 .Catalog.DrawerTop .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
     background-color: #4c719ef7;
@@ -281,6 +331,13 @@ body {
     margin-left: 1.1rem;
     margin-top: 2.1rem;
     color: white;
+}
+
+.Catalog.DrawerTop .MuiPaper-root {
+    /* margin-left: 1.1rem; */
+    /* margin-top: 2.1rem; */
+    /* color: white; */
+    background: #4c719ef0;
 }
 
 /* CATALOG */
@@ -304,6 +361,15 @@ body {
 .DrawerTop.Catalog .TypeBar .ButtonChevronLeftIcon {
     display: none;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,15 +506,7 @@ body {
 }
 
 
-.navbar .SearchButton {
-    display: none;
-}
 
-.navbar .SearchButton svg {
-    /* display: none; */
-    /* font-size: 2.5rem; */
-    font-size: 3.0rem;
-}
 
 .navbar-nav .button {
     align-items: center;
@@ -462,21 +520,12 @@ body {
 .Search .MuiInputBase-root {
     margin: 0;
     /* border-radius: 12rem; */
-    height: 2rem;
+    /* height: 2rem; */
 }
 
 
-.navbar .button {
-    margin-left: 2rem;
-}
 
-.navbar .button .text {
-    font-size: 0.7rem;
-}
 
-.navbar svg {
-    font-size: 2.5rem;
-}
 
 
 
@@ -751,9 +800,6 @@ body {
     border-radius: 3.5rem;
 }
 
-.deviceItem .ratingStack {
-    /* padding-left: 10px; */
-}
 
 
 
@@ -987,6 +1033,38 @@ body {
 
 
 /* !!!ADAPTIVE FILTERS DRAWER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.DrawerLeft_for_Filters 
+.MuiPaper-root {
+    width: 25rem !important;
+    /* width: 80% !important; */
+    background-color: #4c719eed;
+    border-radius: 0;
+    padding-right: 0.7rem;
+}
+
+.DrawerLeft_for_Filters 
+.CloseAdaptiveFiltersDrawerButton
+svg 
+/* .css-i4bv87-MuiSvgIcon-root */
+ {
+    font-size: 2.995rem;
+}
+
+
+
+
+.DrawerLeft_for_Filters 
+.Filters 
+/* .css-188mx6n-MuiSlider-root */
+.MuiSlider-root 
+{
+    /* color: #21568b91; */
+    color: #ffffff;
+    width: 85%;
+}
+
+
+
 .DrawerLeft_for_Filters .CloseAdaptiveFiltersDrawerButton {
     color: white !important;
     width: 2.905rem !important;
@@ -1007,7 +1085,6 @@ body {
 }
 
 .DrawerLeft_for_Filters .Filters .btn-primary {
-    color: #fff;
     /* background-color: #3c79bb8f; */
     background-color: #ffffff;
     border-color: #3d6c9f00;
@@ -1017,24 +1094,7 @@ body {
 }
 
 .DrawerLeft_for_Filters .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-    /* background-color: #fff !important; */
     background-color: #4c719eed !important;
-    /* color: rgba(0, 0, 0, 0.87);
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1 0 auto;
-    z-index: 1200;
-    -webkit-overflow-scrolling: touch;
-    position: fixed;
-    top: 0;
-    outline: 0;
-    left: 0;
-    width: 30rem !important;
-    padding: 1rem; */
 }
 
 .DrawerLeft_for_Filters h5 {
@@ -1069,12 +1129,12 @@ body {
 .DrawerLeft_for_Filters .Filters {
     font-size: 1.15rem;
 }
-.DrawerLeft_for_Filters
-.Filters .p-3.list-group-item {
+
+.DrawerLeft_for_Filters .Filters .p-3.list-group-item {
     color: #ffffff !important;
 }
-.DrawerLeft_for_Filters
-.Filters .p-3.list-group-item.active {
+
+.DrawerLeft_for_Filters .Filters .p-3.list-group-item.active {
     /* color: #ffffff !important; */
     color: #4c719e !important;
     /* background: #92b0d5; */

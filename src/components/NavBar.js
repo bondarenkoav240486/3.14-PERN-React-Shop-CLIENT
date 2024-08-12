@@ -204,7 +204,7 @@ const NavBar = observer(() => {
                 {(['top']).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Drawer
-                            className='DrawerTop Search '
+                            className='DrawerTopSearch '
                             anchor={'top'}
                             open={stateSearch['top']}
                             onClose={toggleDrawerTopSearch(anchor, false)}

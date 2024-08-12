@@ -69,7 +69,7 @@ const BurgerMenuNav = observer(() => {
         { text: 'Кошик ' + totalCount, href: CART_ROUTE, icon: icons[1] },
         { text: 'Головна', href: SHOP_ROUTE, icon: icons[0] },
     ];
-   
+
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen);
@@ -177,7 +177,9 @@ const BurgerMenuNav = observer(() => {
                 </ListItem> */}
             </Drawer>
 
-            <Drawer open={open} onClose={toggleDrawer(false)}>
+            <Drawer open={open} onClose={toggleDrawer(false)}
+                className='BurgerMenuDrawerCatalogTypeBar'
+            >
                 <TypeBar onClose={toggleDrawer(false)} />
             </Drawer>
             {/* <Drawer open={openBrandBar} onClose={() => setOpenBrandBar(false)}>
