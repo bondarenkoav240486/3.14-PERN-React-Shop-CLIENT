@@ -797,7 +797,7 @@ body {
     /* background: #4C719E; */
     background: #237faec4;
     border: none;
-    border-radius: 3.5rem;
+    border-radius: 0.50rem !important;
 }
 
 
