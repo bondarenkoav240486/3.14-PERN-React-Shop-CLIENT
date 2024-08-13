@@ -982,10 +982,14 @@ body {
     width: 7.0rem;
 }
 
-.Filters .css-188mx6n-MuiSlider-root {
+.Filters 
+.MuiSlider-root
+/* .css-188mx6n-MuiSlider-root  */
+{
     color: #21568b91;
     width: 95%;
 }
+
 
 .Filters .list-group-item.active {
     z-index: 2;
