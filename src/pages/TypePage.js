@@ -14,7 +14,6 @@ import {
 } from "../http/deviceAPI";
 import Pages from "../components/Pages";
 
-import FilterPrice from "../components/FilterPrice";
 import SortBar from "../components/SortBar";
 
 import Drawer from '@mui/material/Drawer';
