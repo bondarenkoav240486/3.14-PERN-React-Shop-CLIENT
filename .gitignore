@@ -2,6 +2,8 @@
 node_modules
 build
 .env
+Dokerfile
+
 .env.local
 .env.development.local
 .env.test.local
