@@ -1,11 +1,12 @@
 import { makeAutoObservable } from "mobx";
 import { getCartFromLS } from '../utils/getCartFromLS';
 import { calcTotalPrice } from '../utils/calcTotalPrice';
-import { 
-    addToBasket, 
-    minusFromBasket, 
-    fetchDevicesFromBasket ,
-    clearBasket
+import {
+    addToBasket,
+    minusFromBasket,
+    fetchDevicesFromBasket,
+    clearBasket,
+    deleteFromBasket
 } from "../http/userAPI";
 
 const CartState = getCartFromLS();
@@ -60,11 +61,13 @@ export default class CartStore {
 
     minusItem(id, user) {
         const findItem = this._items.find((obj) => obj.id === id);
-
         if (findItem) {
             findItem.count--;
         }
-
+        console.log(
+            'user : ', user
+            // user.isAuth
+        )
         this._totalPrice = calcTotalPrice(this._items);
         // this.writeToLocalStorage(this._items)
 
@@ -76,10 +79,26 @@ export default class CartStore {
         }
     }
 
-    removeItem(id) {
-        this._items = this._items.filter((obj) => obj.id !== id);
+    // removeItem(id) {
+    //     this._items = this._items.filter((obj) => obj.id !== id);
+    //     this._totalPrice = calcTotalPrice(this._items);
+    //     this.writeToLocalStorage(this._items)
+    // }
+    async removeItem(id, user) {
+        // this._items = this._items.filter((obj) => obj.id !== id);
+        // this._totalPrice = calcTotalPrice(this._items);
+        if (user.isAuth) {
+            // Remove item from the database if the user is authenticated
+            await deleteFromBasket(user.user.id, id);
+            await this.getCartFromDB(user.user.id)
+        } else {
+            // Remove item from local storage if the user is not authenticated
+            this._items = this._items.filter((obj) => obj.id !== id);
+            this.writeToLocalStorage(this._items);
+            this.setItems(this._items)
+        }
+        // this._items = this._items.filter((obj) => obj.id !== id);
         this._totalPrice = calcTotalPrice(this._items);
-        this.writeToLocalStorage(this._items)
     }
 
     clearItems(user) {
@@ -137,6 +156,7 @@ export default class CartStore {
             totalPrice,
         };
         this.setItems(items);
+        this.setTotalPrice(totalPrice);
 
         // return {
         //     items: items,

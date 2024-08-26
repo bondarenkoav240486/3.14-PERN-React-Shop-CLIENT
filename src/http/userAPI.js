@@ -70,3 +70,13 @@ export const addRate = async (idUser, idDevice, rateValue) => {
         console.log(error)
     }
 }
+
+// Add this function in userAPI.js
+export const deleteFromBasket = async (idUser, idDevice) => {
+    try {
+        const { data } = await $authHost.post('api/user/delete-from-basket', { idUser, idDevice });
+        return data;
+    } catch (error) {
+        console.error("Error deleting item from basket:", error);
+    }
+};
